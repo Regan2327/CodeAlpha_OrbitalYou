@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at top, #000015, #010a20);
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+input, button {
+  padding: 0.6rem 1rem;
+  margin: 1rem 0.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+}
+
+button {
+  background-color: #00c2cb;
+  color: #000;
+  cursor: pointer;
+}
+
+.planets {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.solar-system {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+
+.orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 1px dashed rgba(255,255,255,0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: rotate 20s linear infinite;
+}
+
+.orbit.mercury {
+  width: 120px;
+  height: 120px;
+  animation-duration: 6s;
+}
+
+.orbit.venus {
+  width: 180px;
+  height: 180px;
+  animation-duration: 10s;
+}
+
+.orbit.mars {
+  width: 240px;
+  height: 240px;
+  animation-duration: 15s;
+}
+
+.orbit.jupiter {
+  width: 300px;
+  height: 300px;
+  animation-duration: 25s;
+}
+
+.planet {
+  width: 40px;
+  height: 40px;
+  background: #eee;
+  color: black;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 0.8rem;
+  transform: translateX(-50%) translateY(-50%);
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  animation: counterRotate 20s linear infinite;
+  transition: transform 0.2s ease;
+}
+
+.planet:hover {
+  transform: scale(1.1) translateX(-50%) translateY(-50%);
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes rotate {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes counterRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}

@@ -1,0 +1,45 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OrbitalYou - Planet Age Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🌌 OrbitalYou</h1>
+    <p>Enter your birth date to discover your age on other planets!</p>
+    <input type="date" id="dob" />
+    <button onclick="calculatePlanetAges()">Launch</button>
+
+    <div id="planet-ages" class="planets hidden">
+      <div class="solar-system">
+        <div class="orbit mercury">
+          <div class="planet" title="Mercury">
+            <span>☿<br><span id="mercury">0</span> yrs</span>
+          </div>
+        </div>
+        <div class="orbit venus">
+          <div class="planet" title="Venus">
+            <span>♀<br><span id="venus">0</span> yrs</span>
+          </div>
+        </div>
+        <div class="orbit mars">
+          <div class="planet" title="Mars">
+            <span>♂<br><span id="mars">0</span> yrs</span>
+          </div>
+        </div>
+        <div class="orbit jupiter">
+          <div class="planet" title="Jupiter">
+            <span>♃<br><span id="jupiter">0</span> yrs</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
